@@ -8,23 +8,43 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <title>food</title>
     <style>
         body{
-            font-family:"微軟正黑體";
-            
-
+            font-family:"Segoe UI","微軟正黑體","Open Sans", sans-serif;            
+        }
+        h2,h3{
+            font-family: "Playfair Display", serif,"Segoe UI","微軟正黑體";
         }
 		.header-carouse-item{
-			height:400px;			
+			height:500px;			
 		}
 		.bg-cover{
+            background-color:#282923;
 			background-size:cover;
 			background-position:center center;
             background-repeat: no-repeat;
+
 		}
+        .bg-cover2{
+            background-size:cover;
+            background-position:center center;
+            background-repeat: no-repeat;
+            background-color:black;
+
+        }
+
+@media only screen and (max-width: 768px) {
+   .bg-cover {
+     height:300px;
+    }
+  }
 		.carousel-caption{
 			background-color:rgba(0,0,0,.6);
+            left:30%;
+            right:30%;
+           font-family: 'Playball', cursive;
 		}
 		.fas{
 			margin-right:10px;
@@ -32,13 +52,10 @@
        @media (min-width:768px){
         .text-md-dark{
             color:#333;
-
+            
              }
        }
-     
-       
-       
-        			
+		
         label{
             margin-bottom: 0px;
             margin-top: 10px;
@@ -46,19 +63,27 @@
         footer{
             background-color: #f0f0f0;
         }
-		
-	
-
-	
-	
-	</style>
+        .gotop{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            z-index: 99;
+        }
+        .bg-myblue {
+            background-color: #23B6B6;
+        }
+    	</style>
 </head>
 
 <body>
+  <div class="gotop">
+  <a href="#" class="btn btn-danger ben-sm">Top</a>
+  </div>
+
     <!--頂部-->
     <div class="bg-secondary py-1">
         <div class="container text-right">
-            <a href="#" class="text-white mr-2"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-facebook-square"></i></a>
             <a href="#" class="text-white"><i class="fab fa-twitter-square"></i></a>
         </div>
     </div>
@@ -74,16 +99,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home page<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             美食菜單
-                        </a>
+                        </a> 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#information">街頭美食</a>
-                            <a class="dropdown-item" href="#information">傳統美食</a>
+                            <a class="dropdown-item" href="#information">更多美食</a>
                             <a class="dropdown-item" href="#information">關於我們</a>
                         </div>
                     </li>
@@ -96,60 +121,59 @@
         </div>
     </nav>
 
-    <!--輪播圖-->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+   <!--輪播圖-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item header-carouse-item bg-cover active" style="background-image:url(food01.jpg)">
+            <div class="carousel-item header-carouse-item bg-cover active" style="background-image:url(http://ibizaverserhoteles.com/wp-content/uploads/2014/05/sushi.jpg)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>大口的放縱，毫無保留</h5>
-                    <p>華人的飲食文化淵遠流長，舉世皆知，雖然今天在國際上各大都市均可吃到中國菜，但是行家們仍一致認為唯有在臺灣才能品嚐到各式各樣道地的中國菜餚。</p>
+                    <h4>Season Side</h4>
+                    <p>L'hotel Nina et Convention Centre</p>
                 </div>
             </div>
-            <div class="carousel-item header-carouse-item bg-cover" style="background-image:url(food02.jpg)">
+            <div class="carousel-item header-carouse-item bg-cover" style="background-image:url(https://static1.squarespace.com/static/56515e47e4b0b746f0e3d9a3/56516a45e4b085e3bb889b48/565291b3e4b085e3bb8ff971/1470172012804/Serpas_Bacon+Wrapped+Beef+Tenderloin_2.jpg?format=1500w)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>民以食為天的臺灣，幾乎是三步一小吃店</h5>
+                    <h4>Festive Food</h4>
                     <p>Waterfront Ocean Express Station</p>
                 </div>
             </div>
-            <div class="carousel-item header-carouse-item bg-cover" style="background-image:url(food03.jpg)">
+            <div class="carousel-item header-carouse-item bg-cover" style="background-image:url(https://cdn-image.foodandwine.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/1542039264/los-poblanos-historic-inn-best-breakfast-america-FT-BLOG1118.jpg?itok=0AYBXYmg)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>而臺灣獨有的本土料理，風靡全球，嚐味一次，必將永生難忘。</h5>
-                    <p>Taichung station</p>
+                    <h4>Fresh groceries</h4>
+                    <p>Every week, our Super 6 and Fresh Weekly Offers make fresh fruit </p>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
-
     <!--內容1-->
-    <div class="section bg-info py-3" id="information">
+    <div class="section bg-myblue py-3" id="information">
         <div class="container py-2">
             <div class="row text-white text-center">
                 <div class="col-md-4 mt-3">
                     <i class="fas fa-utensils fa-5x"></i>
-                    <h3>忘卻不瞭的莓果香</h3>
-                    <p>沒有遺憾的愛過 支持過他們 在商言商 他們總是假設:喔 但相信我 可是已經來不急囉</p>
+                    <h2>Publicam studuerit</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut minima pariatur corrupti a ea numquam. Veniam corrupti vitae eveniet quisquam quia. Neque molestias harum rem.</p>
                 </div>
 
 
                 <div class="col-md-4 mt-3">
-                    <i class="fas fa-utensils fa-5x"></i>
-                    <h3>忘卻不瞭的莓果香</h3>
-                    <p>沒有遺憾的愛過 支持過他們 在商言商 他們總是假設:喔 但相信我 可是已經來不急囉</p>
+                    <i class="fas fa-camera fa-5x"></i>
+                    <h2>Istud optinueris</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa non voluptate aperiam blanditiis a iure, saepe dolor est eligendi. Praesentium adipisci autem at est porro.</p>
                 </div>
 
 
                 <div class="col-md-4 mt-3">
-                    <i class="fas fa-utensils fa-5x"></i>
-                    <h3>忘卻不瞭的莓果香</h3>
-                    <p>沒有遺憾的愛過 支持過他們 在商言商 他們總是假設:喔 但相信我 可是已經來不急囉</p>
+                    <i class="fas fa-clipboard-check fa-5x"></i>
+                    <h2>Vero istorum</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint sit, repellendus iste veritatis illum laboriosam nobis, recusandae aut ipsum quaerat vero maxime eius labore molestias, impedit consequuntur exercitationem unde!</p>
                 </div>
 
             </div>
@@ -158,13 +182,13 @@
 
 
     <!--內容2-->
-    <section class="container-fluid py-5 text-white" style="position:relative;color:rg;" id="tech">
-        <div class="row">
-            <div class="col-md-4 bg-cover" style="
+    <section class="container-fluid py-5 text-white bg-light" style="position:relative;" id="tech" >
+        <div class="row img-bg-dark" >
+            <div class="col-md-4 bg-cover2" style="
 				position:absolute;top:0; bottom:0;
-				background-image:url(food04.jpg);"></div>
+				background-image:url(https://images.unsplash.com/photo-1548586795-03003b08f27c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);"></div>
         </div>
-        <div class="container">
+        <div class="container ">
             <div class="row justify-content-end text-md-dark" >
                 <div class="col-md-8">
                     <h3><i class="fas fa-address-card"></i>歡迎來到一家餐廳</h3>
@@ -173,13 +197,13 @@
 
                     <div class="row mt-4">
                         <div class="col-md-6">
-                            <h3><i class="fas fa-address-card"></i>像美食班的饗宴</h3>
+                            <h3><i class="fas fa-hammer "></i>像美食班的饗宴</h3>
                             <p>別候微國起法子在白學無、和了但山越會縣更、心家期調城受治、開們心；我要作即府們在多建傷印死岸自念走個的五兒大不緊花事灣。</p>
                         </div>
 
                         <div class="col-md-6">
-                            <h3><i class="fas fa-address-card"></i>呵護您溫軟的胃</h3>
-                            <p>產生沒有意義的文字組合（文章？），供排版時填充版面用，但不會因為字義而左右版型的判斷。文字、標點符號出現機率大致符合台灣文章習慣。聽說很多學排版的都會用這個工具</p>
+                            <h3><i class="fas fa-calendar-check "></i>呵護您溫軟的胃</h3>
+                            <p>產生沒有意義的文字組合，供排版時填充版面用，但不會因為字義而左右版型的判斷。文字、標點符號出現機率大致符合台灣文章習慣。聽說很多學排版的都會用這個工具</p>
                             <a class="btn btn-success float-right" href="#">點我查看</a>
                         </div>
 
@@ -193,28 +217,26 @@
     <section id="self bg-light">
         <div class="container py-3">
             <div class="text-center py-5">
-                <h2>為何如此的美味呢</h2>
+                <h1>Why so delicious?</h1>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="d-flex">
-                        <div><i class="fas fa-baby-carriage fa-4x"></i></div>
-                        <div>
-                            <h3>為何如此美味呢?</h3>
-                            <p>毒全原化，心女熱以雖！我華回風，技海了機市共教不社國？青戰事孩，的裡氣長。子只無子
-                                我；也又動統年；車以主小出經，許土存院她黑臺會眼從列說，我時</p>
+                        <div><i class="fas fa-baby-carriage fa-3x"></i></div>
+                        <div class="ml-2">
+                            <h3>Nullam dictum</h3>
+                            <p>Sic enim censent, oportunitatis esse beate vivere. Sin te auctoritas commovebat, nobisne omnibus et Platoni ipsi nescio quem illum anteponebas? </p>
                         </div>
                     </div>
 
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex">
-                        <div><i class="fas fa-baby-carriage fa-4x"></i></div>
-                        <div>
-                            <h3>為何如此美味呢?</h3>
-                            <p>毒全原化，心女熱以雖！我華回風，技海了機市共教不社國？青戰事孩，的裡氣長。子只無子
-                                我；也又動統年；車以主小出經，許土存院她黑臺會眼從列說，我時</p>
+                        <div><i class="fas fa-pizza-slice  fa-3x"></i></div>
+                        <div class="ml-2">
+                            <h3>Disserendum valet</h3>
+                            <p>Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Quo modo autem optimum, si bonum praeterea nullum est? Quis suae urbis conservatorem</p>
                         </div>
                     </div>
                 </div>
@@ -222,21 +244,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="d-flex">
-                        <div><i class="fas fa-baby-carriage fa-4x"></i></div>
-                        <div>
-                            <h3>為何如此美味呢?</h3>
-                            <p>毒全原化，心女熱以雖！我華回風，技海了機市共教不社國？青戰事孩，的裡氣長。子只無子
-                                我；也又動統年；車以主小出經，許土存院她黑臺會眼從列說，我時</p>
+                        <div><i class="fas fa-bread-slice  fa-3x"></i></div>
+                        <div class="ml-2">
+                            <h3>Nam si amitti</h3>
+                            <p>Codrum, quis Erechthei filias non maxime laudat? Conferam tecum, quam cuique verso rem subicias; Quid affers, cur Thorius</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex">
-                        <div><i class="fas fa-baby-carriage fa-4x"></i></div>
-                        <div>
-                            <h3>為何如此美味呢?</h3>
-                            <p>毒全原化，心女熱以雖！我華回風，技海了機市共教不社國？青戰事孩，的裡氣長。子只無子
-                                我；也又動統年；車以主小出經，許土存院她黑臺會眼從列說，我時</p>
+                        <div><i class="fas fa-hamburger  fa-3x"></i></div>
+                        <div class="ml-2">
+                            <h3>vita beata potest</h3>
+                            <p>sicut fere ceterarum, triplex: una pars est naturae, disserendi altera, vivendi tertia. Sed ad rem redeamus</p>
                         </div>
                     </div>
                 </div>
@@ -250,29 +270,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h3>以臉下眾研時緊公的來更在的的</h3>
-                    <p>建子和，進不相。</p>
-                    <p>毒全原化，心女熱以雖！我華回風，技海了機市共教不社國？青戰事孩，的裡氣長
-                        。子只無子我；也又動統年；車以主小出經，許土存院她黑臺會眼從列說，我時
-                        花直錢養我等後件內樣感算有，看到除學論持讀如家藝一天作。</p>
-                    <p>究者實，那由成這話產創。否關文愛面的總道強。國位地月和美，常約有在位
-                        ！就了灣指藥學會信德想！題二地細外看龍；度作幾越在盡力講理都評說不孩主
-                        來心化效人，去國回來，不那光班語……必變上高來，去孩便隨灣！一認臺的國和
-                        臺散我……老不放媽小出不。有大如、長能要近親打樂我！因說定作於助氣原大
-                        心……難往時有展受不……知我活中站人會？起我時快到型上文少媽點可史特的環
-                        南輕直時非師。
-
-                    </p>
-                    <p>究者實，那由成這話產創。否關文愛面的總道強。國位地月和美，常約有在位
-                        ！就了灣指藥學會信德想！題二地細外看龍；度作幾越在盡力講理都評說不孩主
-                        來心化效人，去國回來，不那光班語……必變上高來，去孩便隨灣！一認臺的國和
-                        臺散我……老不放媽小出不。有大如、長能要近親打樂我！因說定作於助氣原大
-                        心……難往時有展受不……知我活中站人會？起我時快到型上文少媽點可史特的環
-                        南輕直時非師。
-
-                    </p>
+                    <h1>Sed in rebus apertissimis nimium longi sumus.</h1>
+                    <p>Sed quid minus probandum quam esse</p>
+                    <p>Ita fit beatae vitae domina fortuna, quam Epicurus ait exiguam intervenire sapienti. Tertium autem omnibus aut maximis rebus iis, quae secundum naturam sint, fruentem vivere. Sequitur disserendi ratio cognitioque naturae; Ille incendat? Minime vero istorum quidem, inquit. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus. </p>
+                    
+                    <ul>
+                        <li>Quis enim est, qui non videat haec esse in natura rerum tria?</li>
+                        <li>Videsne quam sit magna dissensio?</li>
+                        <li>Sic enim maiores nostri labores non fugiendos tristissimo tamen verbo aerumnas etiam in deo nominaverunt.</li>
+                    </ul>
+                    <p>Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Quo modo autem optimum, si bonum praeterea nullum est? Quis suae urbis conservatorem Codrum, quis Erechthei filias non maxime laudat? Conferam tecum, quam cuique verso rem subicias; Quid affers, cur Thorius,</p>
                 </div>
-                <div class="col-md-5 text-center"><img src="food05.jpg" alt="food" class="img-fluid w-100" style="height:500px;"></div>
+                <div class="col-md-5 text-center"><img src="http://static.wixstatic.com/media/7e3f3e_aa0934a89a594fcc8369e6c2e2e21c05.jpg" alt="food" class="img-fluid w-100" style="height:500px;"></div>
             </div>
         </div>
         </section>
@@ -310,8 +319,8 @@
                             </div>
                         </form>
                         <div class="mt-3 float-right">
-                            <button type="reset" class="btn btn-secondary">取消</button>
-                            <button type="submit" class="btn btn-success">送出</button>
+                            
+                            <button type="submit" class="btn" style="background-color:#23B6B6;color:white;">Post comment</button>
                         </div>
 
 
@@ -329,7 +338,7 @@
                         <div class="container">
                             <div class="row ">
                                 <div class="col-10 py-2 m-auto">
-                                    <h3>為何乳此美味</h3>
+                                    <h3>Disserendum valet</h3>
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente
                                         necessitatibus,
                                         quaerat quam officia culpa, quibusdam labore, odio cupiditate sed
@@ -343,12 +352,11 @@
                             <div class="container">
                                 <div class="row ">
                                     <div class="col-10 py-2 m-auto">
-                                        <h3>為何乳此美味</h3>
+                                        <h3>Sed tamen intellego quid velit.</h3>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente
                                             necessitatibus,
                                             quaerat quam officia culpa, quibusdam labore, odio cupiditate sed
-                                            reprehenderit. Impedit quo
-                                            ipsam voluptatum dicta exercitationem optio tempora molestias.</p>
+                                            reprehenderit.</p>
                                     </div>
                                 </div>
                             </div>
@@ -358,12 +366,11 @@
         </section>
 
 
-        <footer class=" py-4 mt-5">
-            <div class="container d-flex justify-content-between">
+        <footer class=" py-4 mt-5" style="background-color:#202020;color:#7a7a7a;font-size:15px;">
+            <div class="container d-flex justify-content-around">
                 <div>@copyright by huang 2019</div>
-                <div><i class="fab fa-facebook fa-2x"></i>
-                    <i class="fab fa-line fa-2x mx-2"></i>
-                    <i class="fab fa-twitter fa-2x"></i>
+                <div>追蹤我們<i class="fab fa-facebook fa-2x ml-2" style="font-size: 15px;"></i>
+                  
                 </div>
             </div>
         </footer>
@@ -384,16 +391,32 @@
 
 
 
+        <script>
+            $(document).ready(function(){
+  $('.gotop a').click(function(event){
+   event.preventDefault();
+  $('html,body').animate({
+    scrollTop:0
+  },700);
+  });
+  
+      $(window).scroll(function() {
+        if ( $(this).scrollTop() > 400){
+            $('.gotop a').fadeIn();
+        } else {
+            $('.gotop a').fadeOut();
+        }
+    });
+
+      $('.carousel-caption').fadeIn(1000);
+  }); 
+</script>
 
 
 
 
 
 
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
