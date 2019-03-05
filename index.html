@@ -77,7 +77,7 @@
 
 <body>
   <div class="gotop">
-  <a href="#" class="btn btn-danger ben-sm">Top</a>
+  <a href="#" class="btn btn-danger rounded-0">Top</a>
   </div>
 
     <!--頂部-->
@@ -123,7 +123,13 @@
 
    <!--輪播圖-->
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
+       <ol class="carousel-indicators">
+      <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+      <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+         <li data-target="#carouselExampleFade" data-slide-to="3"></li>
+    </ol>
+      <div class="carousel-inner">
             <div class="carousel-item header-carouse-item bg-cover active" style="background-image:url(http://ibizaverserhoteles.com/wp-content/uploads/2014/05/sushi.jpg)">
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Season Side</h4>
@@ -140,6 +146,12 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h4>Fresh groceries</h4>
                     <p>Every week, our Super 6 and Fresh Weekly Offers make fresh fruit </p>
+                </div>
+            </div>
+              <div class="carousel-item header-carouse-item bg-cover" style="background-image:url(https://www.france-voyage.com/visuals/pratique/enjoying-french-cuisine-29-1_w1000.jpg)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>French Food</h4>
+                    <p>Waterfront Ocean Express Station</p>
                 </div>
             </div>
         </div>
@@ -401,7 +413,7 @@
   });
   
       $(window).scroll(function() {
-        if ( $(this).scrollTop() > 400){
+        if ( $(this).scrollTop() > 700){
             $('.gotop a').fadeIn();
         } else {
             $('.gotop a').fadeOut();
